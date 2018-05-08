@@ -4,7 +4,7 @@ if(count(get_included_files()) ==1)exit("<meta http-equiv='refresh' content='0;u
 // ================ EDIT THIS CONFIGURATION =================
 // ----------------------------------------------------------
 define("fe_license","123456789");
-define("fe_app_base_url","flazenginev3.local");
+define("fe_app_base_url","flazenginebasic.local");
 define("fe_app_initial","FlazEngine");
 define("fe_app_title","FlazEngine");
 define("fe_app_description","FlazEngine Application");

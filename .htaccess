@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	
+    #=========== REMOVE THIS ON WINDOWS OS ===========#
+	#RewriteCond %{SERVER_PORT} 80 
+	#RewriteRule ^(.*)$ flazenginev2.local/$1 [R,L]
+    #========= END REMOVE THIS ON WINDOWS OS =========#
+
+	RewriteCond $1 !^(index\.php|styles|scripts|images|robots\.txt)
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^(.*)$ index.php?$1 [QSA,L]
+	#RewriteRule ^(.*)$/([0-9a-zA-Z-]+)/ index.php?page$1 [NC,L]
+	ErrorDocument 404 /fe_system/404.html
+</IfModule>
