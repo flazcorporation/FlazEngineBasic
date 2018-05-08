@@ -1,0 +1,5 @@
+#!/bin/bash
+mysqldump myalqudw_cyberschool > myalqudw_cyberschool.sql
+git add --all
+git commit -m 'Update'
+git push -f origin master

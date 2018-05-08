@@ -1,0 +1,17 @@
+<?php
+if(count(get_included_files()) ==1)exit("<meta http-equiv='refresh' content='0;url="."http://".$_SERVER['SERVER_NAME']."'>");
+// ----------------------------------------------------------
+// ================ EDIT THIS CONFIGURATION =================
+// "Administrator","President","Manager","Admin","Cashier","Sales","Employee","Customer","Supplier","Personal"
+// ----------------------------------------------------------
+	function administrator(){
+		if(decode($_SESSION['access'])=="Administrator"){
+			return TRUE;
+		}else{
+			return FALSE;
+		}
+	}
+// ----------------------------------------------------------
+// ================ END EDIT THIS CONFIGURATION =============
+// ----------------------------------------------------------
+?>
