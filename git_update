@@ -1,5 +1,5 @@
 #!/bin/bash
-mysqldump myalqudw_cyberschool > myalqudw_cyberschool.sql
+mysqldump -uroot flazenginebasic > flazenginebasic.sql
 git add --all
 git commit -m 'Update'
-git push -f origin master
+git push -f origin version310
